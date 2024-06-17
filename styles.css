@@ -6,16 +6,19 @@
 
 body {
     font-family: 'Georgia', serif;
-    background-color: #f8f1eb;
-    color: #2f3e46;
-    padding: 24px;
 }
 
-.container {
+.container, .dark-container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.container {
+    background-color: #f8f1eb;
+    color: #2f3e46;
+    padding: 24px;
 }
 
 header {
@@ -144,73 +147,23 @@ footer a:hover {
     color: #1a202c;
 }
 
-@media (min-width: 1024px) {
-    main {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .content {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 64px;
-    }
-
-    .text-content {
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .image-content {
-        flex-direction: row;
-        gap: 32px;
-    }
-
-    .secondary-images {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        align-items: flex-start;
-    }
-}
-
-@media (max-width: 768px) {
-    nav {
-        display: none;
-    }
-
-    .menu {
-        display: block;
-    }
-
-    .content {
-        gap: 48px;
-    }
-
-    .image-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .main-image, .secondary-image {
-        width: 100%;
-        max-width: 300px;
-    }
-}
 
 
-.body {
-    font-family: 'Georgia', serif;
-    background-color: #5C5346;
+
+
+
+
+
+
+
+
+
+
+
+.dark-container {
+    background-color: #a14220;
     color: #D9CAB3;
     padding: 24px;
-}
-
-.containers {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .headers {
@@ -226,16 +179,8 @@ footer a:hover {
     color: #FAF4EE;
 }
 
-nav {
-    display: flex;
-    gap: 32px;
-}
-
 nav a {
-    text-decoration: none;
     color: #FAF4EE;
-    font-size: 18px;
-    transition: color 0.3s;
 }
 
 nav a:hover {
@@ -290,6 +235,34 @@ nav a:hover {
 }
 
 @media (min-width: 1024px) {
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 64px;
+    }
+
+    .text-content {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .image-content {
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .secondary-images {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
     .about-us {
         text-align: left;
         margin: 64px 0;
@@ -322,6 +295,20 @@ nav a:hover {
 
     .menu {
         display: block;
+    }
+
+    .content {
+        gap: 48px;
+    }
+
+    .image-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-image, .secondary-image {
+        width: 100%;
+        max-width: 300px;
     }
 
     .about-us {
