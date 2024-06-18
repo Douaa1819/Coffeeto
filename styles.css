@@ -157,7 +157,7 @@ footer a:hover {
     min-height: 100vh;
     background-color: #b2571f;
     color: #D9CAB3;
-    padding: 24px;
+ 
 }
 
 .headers {
@@ -189,8 +189,9 @@ nav a:hover {
 }
 
 .about-us {
+    padding: 24px;
     text-align: center;
-    margin: 64px 0;
+    /* margin: 64px 0; */
 }
 
 .about-us h2 {
@@ -233,13 +234,20 @@ nav a:hover {
     order: 1; /* Pour placer l'image à gauche */
 }
 
+
+.footer-image {
+    width: 100%; /*  l'image occupe toute la largeur */
+    max-width: 100%;
+ /* Ne pas dépasser la largeur maximale */
+}
+
 @media (max-width: 768px) {
     .text-and-image {
         flex-direction: column;
     }
 
     .image-right, .image-left {
-        max-width: 100%; /* Ajuster la largeur maximale pour une vue mobile */
+        max-width: 100%; 
     }
 }
 
