@@ -162,35 +162,53 @@ h1 {
 
 /* -------------------------Responsive-------------------------------- */
 @media only screen and (max-width: 768px) {
-    .container {
-        padding: 16px;
-    }
-
+   
     .title h1 {
         font-size: 48px;
-        top: 40px;
         right: 42px;
     }
 
-    .button-wrapper {
-        margin-top: 20%; 
-        margin-left: 0;
-        align-items: center;
+    .menu {
+        display: block;
     }
 
-    .btn {
-        font-size: 16px;
-    }
-
-    .main-image,
-    .secondary-image {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #f8f1eb;
         width: 100%;
+        padding: 16px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+    .button-wrapper {
+        position: absolute;
+        top: 740px;
+          margin-left: 0;
+          align-items: center;
+      }
+  
+      .btn {
+          font-size: 16px;
+      }
+      .container{
+        width:100vw;
+      }
+  
+      .main-image
+      {
+          width: 100%;
+          margin-bottom: 55px;
+      }
+  .secondary-image{
+      display: none;
+  }
 
     .shop-link {
-        font-size: 18px;
-        right: 10px;
-        bottom: 10px;
+     display: none;
     }
 }
 
@@ -199,6 +217,34 @@ h1 {
         font-size: 36px;
         top: 20px;
         right: 22px;
+    }
+    .menu {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        justify-content: center;
+        top: 60px;
+        left: 20px;
+        background-color: #f8f1eb;
+        width: 100%;
+        padding: 16px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 12px 24px;
+        width: 100%;
+        text-align: center;
+        color: #041f09;
     }
 
     .button-wrapper {
@@ -262,12 +308,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.menu {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #FAF4EE;
-}
+
 
 .about-us {
     padding: 24px;
@@ -277,6 +318,7 @@ nav a:hover {
 .about-us h2 {
     font-size: 36px;
     margin-bottom: 24px;
+    margin-left:    25px;
     color: #FAF4EE;
 }
 
@@ -290,8 +332,9 @@ nav a:hover {
 
 .text-and-image {
     display: flex;
-    gap: 32px;
+    gap: 252px;
     align-items: center;
+    margin-bottom: 10px;
     padding-bottom: 24px;
 }
 
@@ -300,18 +343,21 @@ nav a:hover {
 }
 
 .image-left, .image-right {
-    width: 100%;
     max-width: 300px;
+    
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .image-right {
-    order: 2; 
+    order: 2;
+    width: 100%;
 }
 
 .image-left {
     order: 1; 
+    margin: 0 30px; 
+    width: 60%;
 }
 
 .footer-image {
@@ -330,6 +376,18 @@ nav a:hover {
     .image-right, .image-left {
         max-width: 100%; 
     }
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        top: 70px;
+        left: 0;
+        background-color: #f8f1eb;
+        width: 100%;
+        padding: 8px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 }
 
 @media (min-width: 1024px) {
@@ -343,7 +401,7 @@ nav a:hover {
         align-items: flex-start;
         gap: 64px;
     }
-
+    
     .text-content {
         align-items: flex-start;
         text-align: left;
@@ -544,6 +602,11 @@ nav a:hover {
 
 
 @media (max-width: 768px) {
+        .main-section h1{
+
+            display: flex;
+            justify-content: center;
+        }
     .product-container {
         flex-direction: column;
         align-items: center;
@@ -556,6 +619,18 @@ nav a:hover {
 
     .product-card {
         width: 80%;
+    }
+    .main-section h1 {
+        font-size: 1.5em;
+    }
+
+    .product-info p {
+        font-size: 0.9em;
+    }
+
+    .product-info button {
+        padding: 8px 16px;
+        font-size: 0.9em;
     }
 }
 
