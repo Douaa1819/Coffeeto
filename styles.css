@@ -60,7 +60,7 @@ main {
     padding: 24px;
     display: flex;
     flex-direction: column;
-    height: 100%; /* Assure que le conteneur s'étend sur toute la hauteur */
+    height: 100%; 
 }
 
 .content {
@@ -157,25 +157,27 @@ footer a:hover {
     min-height: 100vh;
     background-color: #b2571f;
     color: #D9CAB3;
+}
+
+
+    .headers {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        }
+        
+        .headers .logo {
+        font-size: 36px;
+        font-weight: bold;
+        color: #FAF4EE;
+        }
  
-}
-
-.headers {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 0;
-}
-
-.headers .logo {
-    font-size: 36px;
-    font-weight: bold;
+    
+    nav a {
     color: #FAF4EE;
-}
-
-nav a {
-    color: #FAF4EE;
-}
+    }
+ 
 
 nav a:hover {
     text-decoration: underline;
@@ -191,7 +193,6 @@ nav a:hover {
 .about-us {
     padding: 24px;
     text-align: center;
-    /* margin: 64px 0; */
 }
 
 .about-us h2 {
@@ -211,8 +212,8 @@ nav a:hover {
 .text-and-image {
     display: flex;
     gap: 32px;
-    
     align-items: center;
+    padding-bottom: 24px;
 }
 
 .image-section {
@@ -227,18 +228,19 @@ nav a:hover {
 }
 
 .image-right {
-    order: 2; /* Pour placer l'image à droite */
+    order: 2; 
 }
 
 .image-left {
-    order: 1; /* Pour placer l'image à gauche */
+    order: 1; 
 }
 
-
 .footer-image {
-    width: 100%; /*  l'image occupe toute la largeur */
+    width: 100%; 
     max-width: 100%;
- /* Ne pas dépasser la largeur maximale */
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 @media (max-width: 768px) {
@@ -306,16 +308,7 @@ nav a:hover {
 }
 
 
-
-
-
-
-
-
-
-
-
-
+/* Proooooooooooooooooooooddddddddduuuuuuuuuuuuuct */
 .product-section {
     display: flex;
     font-family: 'Source Serif Pro', serif;
@@ -443,56 +436,122 @@ nav a:hover {
     cursor: pointer;
 }
 
-footer {
-    background-color: #3d2f2b;
-    color: #ffffff;
-    padding: 40px 20px;
+
+/* fooooooooooooooooooooooooooooooooootttttttttttttttttttttttttteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeer */
+.footer {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: #204e42;
+    color: #D9CAB3;
+    border-top: 2px solid #D9CAB3; 
+    border-bottom: 2px solid #D9CAB3;
 }
 
-footer form {
+.footer .contact-section,
+.footer .form-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin: 0 10px;
+}
+
+.footer h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer address, 
+.footer form {
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 10px; 
+}
+
+.footer address a, 
+.footer form a {
+    color: #D9CAB3;
+    text-decoration: none;
+}
+
+.footer address a:hover, 
+.footer form a:hover {
+    text-decoration: underline;
+}
+
+.footer form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 600px;
+    max-width: 500px; 
+    align-items: flex-start; 
 }
 
-footer form input, footer form textarea {
+.footer form label {
+    margin-bottom: 5px;
+}
+
+.footer form input, 
+.footer form textarea {
     width: 100%;
-    margin: 10px 0;
+    margin-bottom: 10px;
     padding: 10px;
+    background-color:#204e42 ;
+    font-size: 1em;
+    font-size: 1em;
     border: none;
-    font-family: 'Source Code Pro', monospace;
+    border-bottom: 1px solid #D9CAB3; 
+    border-radius: 0;
 }
 
-footer form button {
-    background-color: #8a9a5b;
-    color: #ffffff;
-    border: none;
+.footer form textarea {
+    height: 100px;
+}
+
+.footer form button {
+    align-self: flex-end; 
     padding: 10px 20px;
+    background-color: #204e42; 
+    color: #FAF4EE;
+    border:  1px solid #D9CAB3;
     cursor: pointer;
-    align-self: flex-end;
 }
 
-.contact-info, .social-media {
-    margin: 20px 0;
-    text-align: center;
-}
 
 @media (max-width: 768px) {
-    .navbar {
+    .footer {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
     }
 
-    .product-container {
-        flex-direction: column;
+    .footer .contact-section,
+    .footer .form-section {
         align-items: center;
+        width: 100%;
+        margin: 10px 0;
     }
 
-    footer form input, footer form textarea {
-        width: 90%;
+    .footer form {
+        max-width: 100%;
+    }
+
+    .footer form button {
+        width: 100%; 
+        text-align: center;
+        align-self: center; 
+    }
+
+    .footer form button {
+        align-self: flex-end; 
+        padding: 5px 5px;
+      
+    }
+
+    .footer form button {
+        width: 20%;
     }
 }
+
