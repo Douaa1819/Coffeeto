@@ -8,10 +8,7 @@ body {
     font-family: 'Georgia', serif;
 }
 
-.navbar a {
-    font-family: 'Source Code Pro', monospace;
-    color: #041f09;
-}
+
 
 header {
     display: flex;
@@ -30,11 +27,15 @@ nav {
     gap: 32px;
 }
 
+
+.navbar a {
+    font-family: 'Source Code Pro', monospace;
+    color: #041f09;
+}
+
 nav a {
     text-decoration: none;
-    color: #fc0000;
     font-size: 18px;
-    transition: color 0.3s;
 }
 
 nav a:hover {
@@ -43,6 +44,7 @@ nav a:hover {
 
 .menu {
     display: none;
+    color: #232e27;
     font-size: 24px;
     cursor: pointer;
 }
@@ -56,7 +58,7 @@ main {
 
 .container {
     background-color: #f8f1eb;
-    color: #2f3e46;
+    color: #232e27;
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -88,9 +90,16 @@ main {
     border-radius: 50%;
 }
 
+.title h1{
+
+    font-size: 68px;
+    position: relative;
+    top: 70px;
+    right: 82px;
+}
+
 h1 {
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 58px;
 }
 
 .button-wrapper {
@@ -103,9 +112,9 @@ h1 {
 
 .btn {
     font-size: 18px;
-    color: #000d14;
+    font-family: 'Source Code Pro', monospace;
+    color: #232e27;
     text-decoration: none;
-    transition: color 0.3s;
 }
 
 .btn:hover {
@@ -123,12 +132,24 @@ h1 {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.main-image{
+
+    width: 50%;
+}
+.secondary-image {
+    width: 70%;
+    position: relative;
+}
 
 .shop-link {
     display: block;
     margin-top: 16px;
-    font-size: 18px;
-    color: #2f3e46;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 22px;
+    color: #232e27;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -137,21 +158,67 @@ h1 {
     color: #1a202c;
 }
 
-footer {
-    text-align: center;
-    padding: 16px 0;
+
+
+/* -------------------------Responsive-------------------------------- */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+
+    .title h1 {
+        font-size: 48px;
+        top: 40px;
+        right: 42px;
+    }
+
+    .button-wrapper {
+        margin-top: 20%; 
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    .main-image,
+    .secondary-image {
+        width: 100%;
+    }
+
+    .shop-link {
+        font-size: 18px;
+        right: 10px;
+        bottom: 10px;
+    }
 }
 
-footer a {
-    font-size: 18px;
-    color: #2f3e46;
-    text-decoration: none;
-    transition: color 0.3s;
+@media only screen and (max-width: 480px) {
+    .title h1 {
+        font-size: 36px;
+        top: 20px;
+        right: 22px;
+    }
+
+    .button-wrapper {
+        margin-top: 30%; 
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+    .shop-link {
+        font-size: 16px;
+        right: 5px;
+        top: 5px;
+    }
 }
 
-footer a:hover {
-    color: #1a202c;
-}
+
+
+/*---------------------------------------------------- 2 emesectionn */
 
 .dark-container {
     min-height: 100vh;
