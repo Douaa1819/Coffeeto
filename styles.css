@@ -464,63 +464,89 @@ nav a:hover {
     display: flex;
     font-family: 'Source Serif Pro', serif;
     background-color: #f8f1eb;
-    color: #2f3e46;
-    padding-top: 13px;
     flex-direction: column;
     align-items: center;
-    gap: 64px;
-    padding: 32px;
+    overflow: hidden;
+    color: #2f3e46;
+    gap: 44px;
+    padding: 22px;
+}
+
+.header  {
+    font-size: 48px;
+    color: #2f3e46;
+    position: relative;
 }
 
 .product {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     max-width: 1200px;
     border-bottom: 1px solid #d9cab3;
-    padding-bottom: 32px;
+    padding: 32px;
+    background-color: #f8f1eb;
+    margin-bottom: 24px;
 }
 
 .product-info {
-    flex: 1;
-    padding: 16px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .product-title {
     font-size: 36px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #041f09;
+    border-bottom: 1px solid #5d554a;
+    width: 60%;
+    margin-left: 14px;
     font-weight: 700;
-    margin-bottom: 16px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .product-description {
-    font-size: 18px;
-    margin-bottom: 16px;
+    font-size: 15px;
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 12px;
+    padding: 0 20px;
 }
 
 .product-details {
-    font-size: 14px;
+    font-size: 13px;
+    border-bottom: 1px solid #5d554a;
+    width: 60%;
+    font-family: 'Source Code Pro', monospace;
     color: #041f09;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+ padding-left: 24px;
+ padding-bottom: 12px;
 }
-
 .product-more-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
 }
 
 .product-more-info p {
     font-size: 14px;
     margin-bottom: 8px;
+    font-family: 'Source Code Pro', monospace;
+}
+.one{
+    color: #b2571f;
 }
 
 .product-button {
-    padding: 10px 20px;
-    background-color: #041f09;
-    color: #fff;
-    border: none;
+    padding: 10px 15px;
+    background-color: transparent;
+    font-family: 'Source Code Pro', monospace;
+    color: #041f09;
+    border:1px solid #041f09;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -528,15 +554,26 @@ nav a:hover {
 .product-button:hover {
     background-color: #2f3e46;
 }
-
 .product-image img {
     max-width: 300px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+@media (min-width: 768px) {
+    .product {
+        flex-direction: row;
+    }
 
+    .product-info, .product-image {
+        flex: 1;
+        padding: 10px;
+    }
 
+    .product-info {
+        text-align: left;
+    }
+}
 
 
 
