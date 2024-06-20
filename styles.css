@@ -69,7 +69,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    flex-grow: 1; /* Pour que le contenu prenne tout l'espace disponible */
 }
 
 .text-content {
@@ -163,10 +162,7 @@ h1 {
 /* -------------------------Responsive-------------------------------- */
 @media only screen and (max-width: 768px) {
    
-    .title h1 {
-        font-size: 48px;
-        right: 42px;
-    }
+  
 
     .menu {
         display: block;
@@ -174,7 +170,15 @@ h1 {
 
 
 
+    .navbar a {
+        padding: 8px 16px;
+        width: 100%;
+    }
 
+    .navbar a:hover {
+        color: white;
+        background-color: #000000;
+    }
     .navbar {
         display: none;
         flex-direction: column;
@@ -187,6 +191,12 @@ h1 {
         padding: 16px 0;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
+    }
+
+
+    .title h1 {
+        font-size: 48px;
+        right: 42px;
     }
     .button-wrapper {
         position: absolute;
@@ -214,15 +224,7 @@ h1 {
     .shop-link {
      display: none;
     }
-    .navbar a {
-        padding: 8px 16px;
-        width: 100%;
-    }
-
-    .navbar a:hover {
-        color: white;
-        background-color: #000000;
-    }
+  
 
 }
 
@@ -287,41 +289,41 @@ h1 {
 }
 
 
-    .header {
-        display: flex;
-        
-        justify-content: space-between;
-        align-items: center;
-        padding: 16px;
-        }
-        
-        .header .logo {
-        font-size: 36px;
-        font-weight: bold;
-        color: #FAF4EE;
-        }
- 
-    
-    nav a {
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.header .logo {
+    font-size: 36px;
+    font-weight: bold;
     color: #FAF4EE;
-     font-family: 'Source Code Pro', monospace;
-   
-    }
- 
-header h1{
+}
+.menus {
+    display: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+.navbars a {
+    color: #FAF4EE;
+    font-family: 'Source Code Pro', monospace;
+}
+.navbars a:hover {
+    text-decoration: underline;
+}
+
+
+header h1 {
     font-family: 'Source Code Pro', monospace;
     color: #133709;
     font-size: 5vh;
     display: flex;
-  justify-content: flex-start;
-  margin-right: 35em;
-
+    justify-content: flex-start;
+    margin-right: 35em;
 }
-
-nav a:hover {
-    text-decoration: underline;
-}
-
 
 
 .about-us {
@@ -332,7 +334,7 @@ nav a:hover {
 .about-us h2 {
     font-size: 36px;
     margin-bottom: 24px;
-    margin-left:    25px;
+    margin-left: 25px;
     color: #FAF4EE;
 }
 
@@ -358,7 +360,6 @@ nav a:hover {
 
 .image-left, .image-right {
     max-width: 300px;
-    
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -381,27 +382,104 @@ nav a:hover {
     margin: 0;
     padding: 0;
 }
+@media only screen and (max-width: 480px) {
 
-@media (max-width: 768px) {
+    .menus {
+        display: block;
+    }
+
+    
+    .navbars {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #f8f1eb;
+        width: 100%;
+        padding: 16px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .navbar a {
+        padding: 8px 16px;
+        width: 100%;
+    }
+
+    .navbars a:hover {
+        color: white;
+        background-color: #000000;
+    }
+
+        .title h1 {
+            font-size: 36px;
+            top: 20px;
+            right: 22px;
+        }
+    
+        .button-wrapper {
+            margin-top: 30%;
+        }
+    
+        .btn {
+            font-size: 14px;
+        }
+    
+        .shop-link {
+            font-size: 16px;
+            right: 5px;
+            top: 5px;
+        }
+    
+       
+     
+    }
+@media only screen and (max-width: 768px) {
+    .navbars a {
+        padding: 8px 16px;
+        width: 100%;
+    }
+
+    .navbars a:hover {
+        color: white;
+        background-color: #000000;
+    }
+    .navbars {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #f8f1eb;
+        width: 100%;
+        padding: 16px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+
+    .menus {
+        display: block;
+    }
+
+
+
+  
     .text-and-image {
         flex-direction: column;
     }
+    /* .main-nav {
+        display: none;
+    } */
 
     .image-right, .image-left {
         max-width: 100%; 
     }
-    nav {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        position: relative;
-        top: 70px;
-        left: 0;
-        background-color: #f8f1eb;
-        width: 100%;
-        padding: 8px 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+
+    
 }
 
 @media (min-width: 1024px) {
@@ -409,13 +487,15 @@ nav a:hover {
         flex-direction: row;
         justify-content: space-between;
     }
-
+    .menus {
+        display: none;
+    }
     .content {
         flex-direction: row;
         align-items: flex-start;
         gap: 64px;
     }
-    
+
     .text-content {
         align-items: flex-start;
         text-align: left;
@@ -457,6 +537,7 @@ nav a:hover {
         margin-left: 32px;
     }
 }
+
 
 
 /* Proooooooooooooooooooooddddddddduuuuuuuuuuuuuct */
